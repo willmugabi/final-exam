@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #007bff;
+  }
+  
+  footer {
+    background-color: #343a40;
+  }
+  
+  img {
+    border-radius: 10px;
+  }
+  

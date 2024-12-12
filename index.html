@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Final Exam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5rem;
+    }
+    .details-box {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .links-box {
+      background-color: #000;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .btn-dark {
+      width: 100%;
+    }
+    .exam-pass {
+      margin: 30px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  MUGABI WILLIAM - Final Exam
+</header>
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Image Section -->
+    <div class="col-md-6 text-center">
+      <img id="photo-display" src="images/me.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-dark" onclick="changeImage('prev')">Previous Image</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-dark" onclick="changeImage('next')">Next Image</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Section -->
+    <div class="col-md-6">
+      <div class="details-box">
+        <h4>Your Details</h4>
+        <ul class="list-unstyled">
+          <li><strong>Name:</strong> MUGABI WILLIAM</li>
+          <li><strong>Reg No:</strong> 23/BSE/BU/R/0017</li>
+          <li><strong>Exam No:</strong> 24SEM/BU/Exam2557</li>
+          <li><strong>Email:</strong> mugabiw76@gmail.com</li>
+          <li><strong>Phone Contact:</strong> +256 776 465 029/li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <!-- Personal Website Links -->
+    <div class="col-md-6">
+      <div class="links-box">
+        <h5>Personal Website Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://your-git-pages-link-1" target="_blank" class="text-white">Git Pages Link 1</a></li>
+          <li><a href="https://your-git-pages-link-2" target="_blank" class="text-white">Git Pages Link 2</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Organizational Website Links -->
+    <div class="col-md-6">
+      <div class="links-box">
+        <h5>Organizational Website Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://your-netlify-link-1" target="_blank" class="text-white">Netlify Link 1</a></li>
+          <li><a href="https://your-netlify-link-2" target="_blank" class="text-white">Netlify Link 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exam Pass Photo -->
+  <div class="exam-pass">
+    <img src="images/th.jpg" alt="Exam Pass Photo" class="img-fluid" style="max-width: 300px;">
+  </div>
+</div>
+
+<footer>
+  Footer: Designed by MUGABI WILLIAM
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const images = ["images/me.jpg", "images/ES.jpg", "images/SDV.jpg"];
+  let currentIndex = 0;
+
+  function changeImage(direction) {
+    if (direction === 'next') {
+      currentIndex = (currentIndex + 1) % images.length;
+    } else {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+    document.getElementById('photo-display').src = images[currentIndex];
+  }
+</script>
+</body>
+</html>
